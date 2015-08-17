@@ -10,7 +10,7 @@ FROM debian:latest
 MAINTAINER hihouhou < hihouhou@hihouhou.com >
 
 # Set the version you want of Twiki
-ENV DOKUWIKI_VERSION dokuwiki-2014-09-29b
+ENV DOKUWIKI_VERSION dokuwiki-2015-08-10
 
 # Update & install packages
 RUN apt-get update && \
@@ -34,8 +34,11 @@ ADD users.auth.php /usr/share/dokuwiki/conf/
 # Set up ownership
 RUN chown -R www-data:www-data /usr/share/dokuwiki
 
+#port used
 EXPOSE 80
 
-VOLUME ["/usr/share/dokuwiki", "/var/lib/dokuwiki", "/etc/dokuwiki", "/var/log/"]
+#volume added
+VOLUME ["/usr/share/dokuwiki/data"]
+
 
 CMD /usr/sbin/php5-fpm && /usr/sbin/nginx
