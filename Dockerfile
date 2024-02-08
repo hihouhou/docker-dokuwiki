@@ -10,7 +10,7 @@ FROM debian:latest
 MAINTAINER hihouhou < hihouhou@hihouhou.com >
 
 # Set the version you want of Twiki
-ENV DOKUWIKI_VERSION dokuwiki-2015-08-10
+ENV DOKUWIKI_VERSION release-2024-02-06
 
 # Update & install packages
 RUN apt-get update && \
