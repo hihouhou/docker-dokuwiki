@@ -7,7 +7,7 @@
 # Pull base image.
 FROM debian:latest
 
-MAINTAINER hihouhou < hihouhou@hihouhou.com >
+LABEL org.opencontainers.image.authors="hihouhou < hihouhou@hihouhou.com >"
 
 # Set the version you want of Twiki
 ENV DOKUWIKI_VERSION release-2024-02-06
