@@ -10,7 +10,7 @@ FROM debian:latest
 LABEL org.opencontainers.image.authors="hihouhou < hihouhou@hihouhou.com >"
 
 # Set the version you want of Twiki
-ENV DOKUWIKI_VERSION release-2024-02-06
+ENV DOKUWIKI_VERSION=release-2024-02-06
 
 # Update & install packages
 RUN apt-get update && \
